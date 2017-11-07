@@ -11,34 +11,37 @@
     <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
   </head>
   <body>
-    <form>
-      <input type="text" id="weight" placeholder="Weight">
-      <input type="text" id="height" placeholder="Height">
-      <input type="button" id="calculate" value="Calculate">
-      <input type="checkbox" id="imperial" value="Imperial"/>
-      <label for="imperial">Use Imperial system</label>
-    </form>
-    <div>
-      <span id="display_value"></span>
-      <span id="display_message"></span>
+    <div class="container">
 
-    </div>
-    <script type="text/javascript">
-    $(document).ready(function () {
-      $('#calculate').click(function () {
-        var w = parseFloat($('#weight').val());
-        var h = parseFloat($('#height').val());
-        var person = new Person({weight: w, height: h});
-        if ($('#imperial').is(":checked")) {
-          person.calculate_imperial_bmi();
-        }
-        else {
-          person.calculate_bmi();
-        }
-        $('#display_value').html('Your BMI is ' + person.bmiValue);
-        $('#display_message').html('and you are '+ person.bmiMessage);
+      <form class="form-group">
+        <input type="text" id="weight" placeholder="Weight">
+        <input type="text" id="height" placeholder="Height">
+        <input type="button" id="calculate" value="Calculate">
+        <input type="checkbox" id="imperial" value="Imperial"/>
+        <label for="imperial">Use Imperial system</label>
+      </form>
+      <div>
+        <span id="display_value"></span>
+        <span id="display_message"></span>
+
+      </div>
+      <script type="text/javascript">
+      $(document).ready(function () {
+        $('#calculate').click(function () {
+          var w = parseFloat($('#weight').val());
+          var h = parseFloat($('#height').val());
+          var person = new Person({weight: w, height: h});
+          if ($('#imperial').is(":checked")) {
+            person.calculate_imperial_bmi();
+          }
+          else {
+            person.calculate_bmi();
+          }
+          $('#display_value').html('Your BMI is ' + person.bmiValue);
+          $('#display_message').html('and you are '+ person.bmiMessage);
+        });
       });
-});
-</script>
+    </script>
+  </div>
   </body>
 </html>
