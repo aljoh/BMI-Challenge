@@ -12,7 +12,7 @@
       <input type="text" id="weight" placeholder="Weight">
       <input type="text" id="height" placeholder="Height">
       <input type="button" id="calculate" value="Calculate">
-      <input type="checkbox" id="imperial" value="Imperial" />
+      <input type="checkbox" id="imperial" value="Imperial" checked="true" />
     </form>
     <div>
       <span id="display_value"></span>
@@ -20,16 +20,21 @@
 
     </div>
     <script type="text/javascript">
-      $(document).ready(function () {
-        $('#calculate').click(function () {
-          var w = parseFloat($('#weight').val());
-          var h = parseFloat($('#height').val());
-          var person = new Person({weight: w, height: h});
+    $(document).ready(function () {
+      $('#calculate').click(function () {
+        var w = parseFloat($('#weight').val());
+        var h = parseFloat($('#height').val());
+        var person = new Person({weight: w, height: h});
+        if ($('#imperial').is(":checked")) {
+          person.calculate_imperial_bmi();
+        }
+        else {
           person.calculate_bmi();
-          $('#display_value').html('Your BMI is ' + person.bmiValue);
-          $('#display_message').html('and you are '+ person.bmiMessage);
-        });
-  });
+        }
+        $('#display_value').html('Your BMI is ' + person.bmiValue);
+        $('#display_message').html('and you are '+ person.bmiMessage);
+      });
+});
 </script>
   </body>
 </html>
