@@ -1,5 +1,5 @@
 function BMICalculator(){
-};
+}
 
 BMICalculator.prototype.metric_bmi = function(obj) {
   var weight = obj.weight;
