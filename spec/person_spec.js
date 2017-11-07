@@ -1,7 +1,7 @@
 describe("Person", function() {
   var person;
 
-  describe("Can calculate metric bmi", function() {
+  describe("metric bmi", function() {
 
     beforeEach(function() {
       person = new Person({weight: 90, height: 186});
@@ -26,7 +26,7 @@ describe("Person", function() {
     });
   });
 
-  describe("Can calculate imperial bmi", function() {
+  describe("imperial bmi", function() {
 
     beforeEach(function() {
       person = new Person({weight: 210, height: 74});
@@ -34,6 +34,20 @@ describe("Person", function() {
 
     it("should have a weight of 210", function() {
       expect(person.weight).toEqual(210);
+    });
+
+    it("should have height of 74", function() {
+      expect(person.height).toEqual(74);
+    });
+
+    it("should calculate BMI value", function() {
+      person.calculate_bmi();
+      expect(person.bmiValue).toEqual(26.01);
+    });
+
+    it("should have a BMI message", function() {
+      person.calculate_bmi();
+      expect(person.bmiMessage).toEqual("Overweight");
     });
   });
 });
