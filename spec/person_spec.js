@@ -4,7 +4,10 @@ describe("Person", function() {
   describe("metric bmi", function() {
 
     beforeEach(function() {
-      person = new Person({weight: 90, height: 186});
+      person = new Person({
+        weight: 90,
+        height: 186
+      });
     });
 
     it("should have weight of 90", function() {
@@ -29,7 +32,10 @@ describe("Person", function() {
   describe("imperial bmi", function() {
 
     beforeEach(function() {
-      person = new Person({weight: 210, height: 74});
+      person = new Person({
+        weight: 210,
+        height: 74
+      });
     });
 
     it("should have a weight of 210", function() {

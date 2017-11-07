@@ -1,5 +1,4 @@
-function BMICalculator(){
-}
+function BMICalculator() {}
 
 BMICalculator.prototype.metric_bmi = function(obj) {
   var weight = obj.weight;
@@ -21,7 +20,7 @@ BMICalculator.prototype.imperial_bmi = function(obj) {
   }
 };
 
-function setBMIMessage (obj){
+function setBMIMessage(obj) {
   if (obj.bmiValue < 18.5) {
     obj.bmiMessage = "Underweight";
   }
