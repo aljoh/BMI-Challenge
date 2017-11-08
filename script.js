@@ -11,9 +11,9 @@ var onReady = function() {
       height: h
     });
     if ($('#imperial').is(":checked")) {
-      person.calculate_imperial_bmi();
-    } else {
       person.calculate_bmi();
+    } else {
+      person.calculate_imperial_bmi();
     }
     $('#display_value').html(i18n("bmi_message_prefix") + person.bmiValue);
     $('#display_message').html(i18n("bmi_message_results") + person.bmiMessage);
@@ -26,8 +26,9 @@ loadLocale = function(code) {
   var locale = code || 'en';
   $.getJSON(`src/locales/${locale}.json`).done(function(data){
     applyTranslation(data);
+    deferred.resolve();
   });
-  return deferred.resolve();
+  return deferred;
 };
   applyTranslation = function(data) {
     i18n.translator.add(data);

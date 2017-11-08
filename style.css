@@ -16,5 +16,11 @@ body {
 }
 
 .btn {
+  margin-top: 20px;
   width: 100px;
+}
+
+.checkbox {
+  width: 50px;
+  margin-top: 20px;
 }
