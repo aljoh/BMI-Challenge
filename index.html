@@ -10,7 +10,7 @@
   <link rel="stylesheet" type="text/css" href="style.css" />
   <script src="src/person.js"></script>
   <script src="src/bmi_calculator.js"></script>
-  <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+  <script src="script.js"></script>
 </head>
 
 <body>
@@ -29,32 +29,12 @@
       <div class="checkbox">
         <label><input type="checkbox" id="imperial"> Use Imperial system</label>
       </div>
-      <button type="button" class="btn btn-primary active" id="calculate">Calculate</button>
+      <button type="button" onclick="calcFunction()" class="btn btn-primary active" id="calculate">Calculate</button>
     </form>
-    <div>
-      <span id="display_value"></span>
-      <span id="display_message"></span>
-
+    <div class="result">
+      <p id="display_value"></p>
+      <p id="display_message"></p>
     </div>
-    <script type="text/javascript">
-      $(document).ready(function() {
-        $('#calculate').click(function() {
-          var w = parseFloat($('#weight').val());
-          var h = parseFloat($('#height').val());
-          var person = new Person({
-            weight: w,
-            height: h
-          });
-          if ($('#imperial').is(":checked")) {
-            person.calculate_imperial_bmi();
-          } else {
-            person.calculate_bmi();
-          }
-          $('#display_value').html('Your BMI is ' + person.bmiValue);
-          $('#display_message').html('and you are ' + person.bmiMessage);
-        });
-      });
-    </script>
   </div>
 </body>
 
