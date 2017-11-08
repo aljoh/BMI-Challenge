@@ -1,0 +1,12 @@
+{
+  "values":{
+    "app_name": "BMI Kalkylator",
+    "calculate": "Beräkna",
+    "bmi_message_prefix": "Ditt BMI värde är ",
+    "bmi_message_results": "och ditt BMI status är ",
+    "weight": "Vikt",
+    "height": "Längd",
+    "swedish": "Svenska",
+    "english": "Engelska"
+  }
+}
