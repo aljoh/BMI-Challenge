@@ -3,10 +3,14 @@
     "app_name": "BMI Kalkylator",
     "calculate": "Beräkna",
     "bmi_message_prefix": "Ditt BMI värde är ",
-    "bmi_message_results": "och ditt BMI status är ",
+    "bmi_message_results": "och din BMI status är ",
     "weight": "Vikt",
     "height": "Längd",
     "swedish": "Svenska",
-    "english": "Engelska"
+    "english": "Engelska",
+    "Underweight": "Underviktig",
+    "Normal": "Normal",
+    "Overweight": "Överviktig",
+    "Obese": "Tjock"
   }
 }

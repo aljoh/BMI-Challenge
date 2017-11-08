@@ -7,6 +7,10 @@
     "weight": "Weight",
     "height": "Height",
     "swedish": "Swedish",
-    "english": "English"
+    "english": "English",
+    "Underweight": "Underweight",
+    "Normal": "Normal",
+    "Overweight": "Overweight",
+    "Obese": "Obese"
   }
 }
