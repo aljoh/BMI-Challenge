@@ -1,7 +1,10 @@
 var onReady = function() {
   loadLocale().done(function() {
-  $('button').click(function() {
+  $("#english").addClass("active");
+  $('button').click(function(event) {
     getLocaleCode(this.id);
+    $(event.target).addClass("active");
+    $(event.target).siblings().removeClass("active");
   });
   $('#calculate').click(function() {
     var w = parseFloat($('#weight').val());
