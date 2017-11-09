@@ -1,18 +1,21 @@
 body {
-  background-color: #4b839a;
+  background-color: white;
 }
 
 .container {
-  width: 500px;
+  width: 550px;
   margin-top:100px;
+  display: none;
 }
 
 .result {
-  font-size: 25px;
+  font-size: 18px;
+  display: none;
 }
 
 #calculate {
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .btn {

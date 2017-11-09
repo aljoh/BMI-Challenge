@@ -1,10 +1,10 @@
 var onReady = function() {
   loadLocale().done(function() {
+  $('.container').fadeIn(1000);
   $("#english").addClass("active");
   $('button').click(function(event) {
     getLocaleCode(this.id);
-    $(event.target).addClass("active");
-    $(event.target).siblings().removeClass("active");
+    $(event.target).addClass("active").siblings().removeClass("active");
   });
   $('#calculate').click(function() {
     var w = parseFloat($('#weight').val());
@@ -20,6 +20,7 @@ var onReady = function() {
     }
     $('#display_value').html(i18n("bmi_message_prefix") + person.bmiValue);
     $('#display_message').html(i18n("bmi_message_results") + person.bmiMessage);
+    $('.result').slideDown(500);
   });
 });
 };
