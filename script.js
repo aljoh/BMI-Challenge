@@ -33,7 +33,9 @@ loadLocale = function(code) {
     applyTranslation(data);
     deferred.resolve();
   })
-    .fail(console.log("Could not load JSON file"));
+    .fail(function(){
+      console.log("JSON file could not be loaded");
+    });
   return deferred;
 };
   applyTranslation = function(data) {
