@@ -28,10 +28,12 @@ var onReady = function() {
 loadLocale = function(code) {
   var deferred = $.Deferred();
   var locale = code || 'en';
-  $.getJSON(`src/locales/${locale}.json`).done(function(data){
+  $.getJSON(`src/locales/${locale}.json`)
+    .done(function(data){
     applyTranslation(data);
     deferred.resolve();
-  });
+  })
+    .fail(console.log("Could not load JSON file"));
   return deferred;
 };
   applyTranslation = function(data) {
