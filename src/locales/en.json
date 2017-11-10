@@ -1,0 +1,16 @@
+{
+  "values":{
+    "app_name": "BMI Calculator",
+    "calculate": "Calculate",
+    "bmi_message_prefix": "Your BMI value is ",
+    "bmi_message_results": "and your BMI status is ",
+    "weight": "Weight",
+    "height": "Height",
+    "swedish": "Swedish",
+    "english": "English",
+    "Underweight": "Underweight",
+    "Normal": "Normal",
+    "Overweight": "Overweight",
+    "Obese": "Obese"
+  }
+}

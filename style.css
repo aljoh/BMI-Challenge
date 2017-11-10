@@ -1,8 +1,29 @@
 body {
-  background-color: grey;
+  background-color: white;
 }
 
 .container {
-  width: 500px;
+  width: 550px;
   margin-top:100px;
+  display: none;
+}
+
+.result {
+  font-size: 18px;
+  display: none;
+}
+
+#calculate {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  margin-top: 20px;
+  width: 100px;
+}
+
+.checkbox {
+  width: 50px;
+  margin-top: 20px;
 }
