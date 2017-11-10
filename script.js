@@ -14,9 +14,9 @@ var onReady = function() {
       height: h
     });
     if ($('#imperial').is(":checked")) {
-      person.calculate_bmi();
+      person.calculate_bmi("metric");
     } else {
-      person.calculate_imperial_bmi();
+      person.calculate_bmi("imperial");
     }
     $('#display_value').html(i18n("bmi_message_prefix") + person.bmiValue);
     $('#display_message').html(i18n("bmi_message_results") + person.bmiMessage);
